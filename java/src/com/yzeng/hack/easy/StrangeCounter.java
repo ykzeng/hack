@@ -5,21 +5,18 @@ import java.util.Scanner;
 public class StrangeCounter {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int t = in.nextInt();
+        long t = in.nextLong();
         
-        int cycle = 3, curretT = 0, currentValue = 3;
+        long cycle = 3, curretT = 0;
         while (true) {
-        	currentValue = cycle + 1;
-			for (int i = 0; i < cycle; i++) {
+			for (long i = cycle; i > 0; i--) {
 				curretT ++;
-				currentValue --;
 				if (curretT == t) {
-					System.out.println(currentValue);
+					System.out.println(i);
 					return;
 				}
 			}
 			cycle = cycle * 2;
 		}
-        
     }
 }
