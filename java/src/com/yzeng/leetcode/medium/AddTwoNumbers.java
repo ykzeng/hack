@@ -1,6 +1,5 @@
 package com.yzeng.leetcode.medium;
 
-import java.security.spec.ECPrivateKeySpec;
 import java.util.Scanner;
 
 /**
