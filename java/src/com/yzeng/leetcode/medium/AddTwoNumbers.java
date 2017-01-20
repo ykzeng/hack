@@ -2,6 +2,8 @@ package com.yzeng.leetcode.medium;
 
 import java.util.Scanner;
 
+import com.yzeng.datastructures.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -11,16 +13,6 @@ import java.util.Scanner;
  * }
  */
 public class AddTwoNumbers {
-	static class ListNode{
-		int val;
-		ListNode next;
-		
-		public ListNode(int x) {
-			// TODO Auto-generated constructor stub
-			this.val = x;
-		}
-	}
-	
 
     static int carry = 0, real_digit = 0;
 	
