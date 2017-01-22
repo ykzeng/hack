@@ -5,25 +5,21 @@ import com.yzeng.datastructures.TreeNode;
 public class LeftLeavesSum {
 	
 	public int sumOfLeftLeaves(TreeNode root) {
+		int sum = 0;
 		if (root == null) {
 			return 0;
 		}
-		int leftSum = 0;
-		leftSum = traverse(root);
-		return leftSum;
-    }
-	
-	public int traverse(TreeNode root){
-		int leftSum = 0;
-		if (root.right != null) {
-			leftSum += traverse(root.right);
-		}
 		if (root.left != null) {
-			leftSum += root.left.val;
-			leftSum += traverse(root.left);
+			if (root.left.left == null && root.left.right == null) {
+				sum += root.left.val;
+			}
+			else {
+				sum += sumOfLeftLeaves(root.left);
+			}
 		}
-		return leftSum;
-	}
+		sum += sumOfLeftLeaves(root.right);
+		return sum;
+    }
 	
 	public static void main(String[] args){
 		TreeNode root = new TreeNode(1);
