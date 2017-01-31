@@ -14,19 +14,46 @@ public class ReverseLinkedList {
 		p.printAll();
 	}
 	
-	public ListNode reverseList(ListNode head) {
+//	public ListNode reverseList(ListNode head) {
+//		if (head == null) {
+//			return null;
+//		}
+//		ListNode result = head, p;
+//		head = head.next;
+//		result.next = null;
+//		while (head != null) {
+//			p = head;
+//			head = head.next;
+//			p.next = result;
+//			result = p;
+//		}
+//		return result;
+//    }
+	
+	
+//	public ListNode reverseList(ListNode head){
+//		ListNode result = null;
+//		while(head != null){
+//			ListNode p = head;
+//			head = head.next;
+//			p.next = result;
+//			result = p;
+//		}
+//		return result;
+//	}
+	
+	public ListNode reverseList(ListNode head){
+		return backAdd(head, null);
+	}
+	
+	public ListNode backAdd(ListNode head, ListNode result){
 		if (head == null) {
-			return null;
+			return result;
 		}
-		ListNode result = head, p;
+		ListNode pListNode = head;
 		head = head.next;
-		result.next = null;
-		while (head != null) {
-			p = head;
-			head = head.next;
-			p.next = result;
-			result = p;
-		}
-		return result;
-    }
+		pListNode.next = result;
+		result = pListNode;
+		return backAdd(head, result);
+	}
 }
