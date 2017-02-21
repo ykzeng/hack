@@ -36,8 +36,8 @@ public class ValidParenthesis {
 	}
 	
 	public static void main(String[] args){
-		String string = "()((()))()())))(((())))()";
-		System.out.println(pureIsValid(string));
+		String string = "(((())))()()()(())";
+		System.out.println(pureIsValid(string, 1));
 	}
 	
 	public static int pureIsValid(String s){
@@ -55,6 +55,34 @@ public class ValidParenthesis {
 		}
 		if (stack.isEmpty())
 			return pair;
+		else
+			return -1;
+	}
+	
+	public static int pureIsValid(String s, int temp){
+		int pair = 0;
+		Stack<Character> stack = new Stack<Character>();
+		for (int i = 0; i < s.length(); i++) {
+			char cur = s.charAt(i);
+			if (cur != '(' && cur != ')') {
+				return -1;
+			}
+			if (stack.isEmpty()) {
+				if(cur == '(')
+					stack.push(cur);
+				else
+					return -1;
+			}
+			else if (stack.peek() == cur - 1) {
+				stack.pop();
+				pair ++;
+			}
+			else
+				stack.push(cur);
+		}
+		if (stack.isEmpty()) {
+			return pair;
+		}
 		else
 			return -1;
 	}
