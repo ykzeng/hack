@@ -1,6 +1,6 @@
 package com.yzeng.amazon;
 
-import com.yzeng.datastructures.TreeNode;
+import com.yzeng.datastructures.linkedlist.TreeNode;
 
 public class MinBST {
 	public static void main(String[] args){

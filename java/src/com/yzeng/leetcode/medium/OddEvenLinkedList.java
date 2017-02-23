@@ -2,7 +2,7 @@ package com.yzeng.leetcode.medium;
 
 import java.awt.List;
 
-import com.yzeng.datastructures.ListNode;
+import com.yzeng.datastructures.linkedlist.ListNode;
 
 public class OddEvenLinkedList {
 	// my original answer

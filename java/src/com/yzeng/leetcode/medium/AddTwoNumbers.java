@@ -2,7 +2,7 @@ package com.yzeng.leetcode.medium;
 
 import java.util.Scanner;
 
-import com.yzeng.datastructures.ListNode;
+import com.yzeng.datastructures.linkedlist.ListNode;
 
 /**
  * Definition for singly-linked list.

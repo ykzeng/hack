@@ -1,6 +1,6 @@
 package com.yzeng.amazon;
 
-import com.yzeng.datastructures.ListNode;
+import com.yzeng.datastructures.linkedlist.ListNode;
 
 public class Reverse2ndHalfList {
 	public static void main(String[] args){

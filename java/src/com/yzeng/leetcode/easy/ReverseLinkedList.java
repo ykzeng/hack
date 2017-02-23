@@ -1,6 +1,6 @@
 package com.yzeng.leetcode.easy;
 
-import com.yzeng.datastructures.ListNode;
+import com.yzeng.datastructures.linkedlist.ListNode;
 
 public class ReverseLinkedList {
 	public static void main(String[] args){

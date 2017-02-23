@@ -1,4 +1,4 @@
-package com.yzeng.datastructures;
+package com.yzeng.datastructures.linkedlist;
 
 public class ListNode{
 	public int val;

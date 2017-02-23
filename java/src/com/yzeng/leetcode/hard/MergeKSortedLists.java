@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Random;
 
-import com.yzeng.datastructures.ListNode;
+import com.yzeng.datastructures.linkedlist.ListNode;
 
 public class MergeKSortedLists {
 	static class NodeComparator implements Comparator<ListNode>{

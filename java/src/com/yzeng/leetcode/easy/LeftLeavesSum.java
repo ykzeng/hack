@@ -1,6 +1,6 @@
 package com.yzeng.leetcode.easy;
 
-import com.yzeng.datastructures.TreeNode;
+import com.yzeng.datastructures.linkedlist.TreeNode;
 
 public class LeftLeavesSum {
 	

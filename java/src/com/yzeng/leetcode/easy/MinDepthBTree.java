@@ -2,7 +2,7 @@ package com.yzeng.leetcode.easy;
 
 import java.util.Stack;
 
-import com.yzeng.datastructures.TreeNode;
+import com.yzeng.datastructures.linkedlist.TreeNode;
 
 public class MinDepthBTree {
 //	public int minDepth(TreeNode root) {
