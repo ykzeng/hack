@@ -1,13 +1,13 @@
 package com.yzeng.amazon;
 
-import com.yzeng.datastructures.linkedlist.TreeNode;
+import com.yzeng.datastructures.tree.TreeNode;
 
 public class MinBST {
 	public static void main(String[] args){
 		
 	}
 	
-	public static int minBST(TreeNode tNode){
+	public static int minBST(TreeNode<Integer> tNode){
 //		if (tNode.left != null && tNode.right != null) {
 //			int leftTotal = minBST(tNode.left), rightTotal = minBST(tNode.right);
 //			return ((leftTotal > rightTotal ? rightTotal : leftTotal) + tNode.val);

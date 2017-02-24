@@ -1,10 +1,10 @@
 package com.yzeng.leetcode.easy;
 
-import com.yzeng.datastructures.linkedlist.TreeNode;
+import com.yzeng.datastructures.tree.TreeNode;
 
 public class LeftLeavesSum {
 	
-	public int sumOfLeftLeaves(TreeNode root) {
+	public int sumOfLeftLeaves(TreeNode<Integer> root) {
 		int sum = 0;
 		if (root == null) {
 			return 0;
