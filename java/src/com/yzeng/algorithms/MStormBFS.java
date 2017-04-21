@@ -22,6 +22,7 @@ public class MStormBFS {
 		return array;
 	}
 	
+	// returns true if all component tasks are allocated, returns false if no
 	public static boolean bfsAssign(int [] exptExecutorsOfDevice, String[] compNames, HashMap<String, Integer> compName2TaskNum){
 		int[] exeOnDevice = exptExecutorsOfDevice.clone(), taskPerLv;
 		// task number for each component
