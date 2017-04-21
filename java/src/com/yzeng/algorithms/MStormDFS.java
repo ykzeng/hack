@@ -4,8 +4,16 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class MStormDFS {
-	public static boolean dfsAssign(int[] exeOnDevice, String[] compNames, HashMap<String, Integer> compName2Task){
-		return false;
+	public static boolean dfsAssign(int [] exptExecutorsOfDevice, String[] compNames, 
+			HashMap<String, Integer> compName2TaskNum, int[][] assignment){
+		int[] exeOnDevice = exptExecutorsOfDevice.clone(), taskPerLv;
+		// task number for each component
+		// get the task count of multi level components respectively
+		taskPerLv = new int[compNames.length];
+		for (int i = 0; i < compNames.length; i++) {
+			taskPerLv[i] = compName2TaskNum.get(compNames[i]);
+		}
+		return dfsAssign(exeOnDevice, taskPerLv, assignment);
 	}
 	
 	public static boolean dfsAssign(int[] exeOnDevice, int[] taskOnComp, int[][] assignment){
