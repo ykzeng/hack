@@ -5,52 +5,12 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class MStormBFS {
-	private int [] exptExecutorsOfDevice;
-	private String[] compNames;
-	// task number for each component
-	private HashMap<String, Integer> compName2TaskNum;
+	
 	// assignment
 	
 	public MStormBFS(){
 		
 	}
-	
-//	public boolean bfsAssign(){
-//		// the device count and component count
-//		int devCount = exptExecutorsOfDevice.length, compCount = compNames.length;
-//		// init the assignment matrix
-//		int[][] assign = new int[devCount][compCount];
-//		for (int i = 0; i < assign.length; i++) {
-//			Arrays.fill(assign[i], 0);
-//		}
-//		// get the task count of multi level components respectively
-//		int[] taskPerLv = new int[compCount];
-//		for (int i = 0; i < compCount; i++) {
-//			taskPerLv[i] = compName2TaskNum.get(compNames[i]);
-//		}
-//		// 
-//		int exeNum, rootLv = 0;
-//		for (int j = 0; j < devCount; j++) {
-//			// remaining executor number of current assigning device, start at dev 0
-//			exeNum = exptExecutorsOfDevice[j];
-//			for (int i = 0; i < taskPerLv.length; i++) {
-//				if (taskPerLv[i] > 0) {
-//					rootLv = i;
-//					break;
-//				}
-//			}
-//			int ret = bfs(rootLv, exeNum, taskPerLv, assign[j]);
-//			if (ret != 0) {
-//				return true;
-//			}
-//		}
-//		for (int i = 0; i < taskPerLv.length; i++) {
-//			if (taskPerLv[i] != 0) {
-//				return false;
-//			}
-//		}
-//		return true;
-//	}
 	
 	public static int[] randArray(int indexBound, int valBound){
 		Random random = new Random(System.currentTimeMillis());
@@ -62,9 +22,16 @@ public class MStormBFS {
 		return array;
 	}
 	
-	public static boolean bfsAssign(){
-		// TODO generate tasks and components here
-		int[] exeOnDevice = randArray(6, 6), taskPerLv = randArray(6, 5);
+	public static boolean bfsAssign(int [] exptExecutorsOfDevice, String[] compNames, HashMap<String, Integer> compName2TaskNum){
+		int[] exeOnDevice = exptExecutorsOfDevice.clone(), taskPerLv;
+		// task number for each component
+		// get the task count of multi level components respectively
+		taskPerLv = new int[compNames.length];
+		for (int i = 0; i < compNames.length; i++) {
+			taskPerLv[i] = compName2TaskNum.get(compNames[i]);
+		}
+		// TODO randomly generate tasks and components here
+		//int[] exeOnDevice = randArray(6, 6), taskPerLv = randArray(6, 5);
 		//passed
 		//int[] exeOnDevice = {6, 5, 4, 3, 3}, taskPerLv = {4, 4, 4, 3, 2};
 		//passed
@@ -155,6 +122,6 @@ public class MStormBFS {
 	}
 	
 	public static void main(String[] args){
-		bfsAssign();
+		//bfsAssign();
 	}
 }
