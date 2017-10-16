@@ -17,7 +17,8 @@ public class ReverseCStr {
 //		
 //	}
 	public static void main(String args[]){
-		String string = "wo lei lajij";
+		//String string = "wo lei lajij";
+		String string = "wo lei lajiij";
 		System.out.println("String to reverse:");
 		System.out.println(string);
 		string = reverse1(string);
