@@ -14,6 +14,20 @@ def test(s):
             return i
     return -1
 
+def findFirstUniqueChar(s):
+    count = {}
+    for c in s:
+        if c in count:
+            count[c] = count[c] + 1
+        else:
+            count[c] = 1
+    for c in s:
+        if count[c]==1:
+            return c
+
+s = "this is my best act and coding script"
+print(findFirstUniqueChar(s))
+
 test1="leetcode"
 print test(test1)
 
